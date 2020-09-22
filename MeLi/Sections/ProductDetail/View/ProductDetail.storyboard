@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Product DetailVC-->
+        <scene sceneID="KQ7-em-Tvt">
+            <objects>
+                <viewController storyboardIdentifier="ProductDetailVC" id="SuO-Im-vNk" customClass="ProductDetailVC" customModule="MeLi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L90-0G-qwT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEo-Wh-m9M">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCS-aX-9LZ">
+                                        <rect key="frame" x="16" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="eTh-N0-Wto"/>
+                                            <constraint firstAttribute="height" constant="50" id="vyk-cI-QuB"/>
+                                        </constraints>
+                                        <state key="normal" image="backIcon"/>
+                                        <connections>
+                                            <action selector="backButtonPressed" destination="SuO-Im-vNk" eventType="touchUpInside" id="tup-Fm-ha4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="dCS-aX-9LZ" firstAttribute="top" secondItem="HJ9-rU-uKW" secondAttribute="top" id="Ay8-1Z-YfG"/>
+                                    <constraint firstItem="dCS-aX-9LZ" firstAttribute="leading" secondItem="oEo-Wh-m9M" secondAttribute="leading" constant="16" id="LGM-lz-avG"/>
+                                    <constraint firstAttribute="bottom" secondItem="dCS-aX-9LZ" secondAttribute="bottom" id="iCz-b3-TUg"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="HJ9-rU-uKW"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LSp-4G-a4h">
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oEo-Wh-m9M" firstAttribute="top" secondItem="L90-0G-qwT" secondAttribute="top" id="97A-Fo-yGN"/>
+                            <constraint firstItem="LSp-4G-a4h" firstAttribute="leading" secondItem="0M3-0w-qUL" secondAttribute="leading" id="BqB-ox-yID"/>
+                            <constraint firstItem="LSp-4G-a4h" firstAttribute="top" secondItem="oEo-Wh-m9M" secondAttribute="bottom" id="CAB-g8-fCo"/>
+                            <constraint firstItem="oEo-Wh-m9M" firstAttribute="leading" secondItem="L90-0G-qwT" secondAttribute="leading" id="KTM-KP-pzU"/>
+                            <constraint firstItem="LSp-4G-a4h" firstAttribute="trailing" secondItem="0M3-0w-qUL" secondAttribute="trailing" id="Sc5-y9-KRc"/>
+                            <constraint firstItem="oEo-Wh-m9M" firstAttribute="trailing" secondItem="L90-0G-qwT" secondAttribute="trailing" id="iXx-qK-6b3"/>
+                            <constraint firstAttribute="bottom" secondItem="LSp-4G-a4h" secondAttribute="bottom" id="nwp-em-2Yk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0M3-0w-qUL"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="LSp-4G-a4h" id="zyM-Gc-7lf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EKn-8W-Wyz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="131.25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backIcon" width="29" height="29"/>
+    </resources>
+</document>

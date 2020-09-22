@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Error HandlingVC-->
+        <scene sceneID="pLP-xR-IUa">
+            <objects>
+                <viewController storyboardIdentifier="ErrorHandlingVC" id="lza-8w-WQd" customClass="ErrorHandlingVC" customModule="MeLi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vTQ-G8-kwM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connectionAlert" translatesAutoresizingMaskIntoConstraints="NO" id="Blc-ZT-YVv">
+                                <rect key="frame" x="100" y="224" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="3Hb-Ls-YJG"/>
+                                    <constraint firstAttribute="height" constant="120" id="DkP-mP-a5X"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIC-AA-pY8">
+                                <rect key="frame" x="16" y="360" width="288" height="26"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                                <color key="textColor" name="TextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hubo un error, por favor, verifica tu conexión a internet e intenta de nuevo, si el error persiste intenta de nuevo mas tarde" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Cd-lf-gDA">
+                                <rect key="frame" x="16" y="402" width="288" height="87.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                                <color key="textColor" name="TextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYM-L3-qxe">
+                                <rect key="frame" x="16" y="502" width="288" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="B4g-Vr-0xT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <state key="normal" title="Ok">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="okPressed" destination="lza-8w-WQd" eventType="touchUpInside" id="qu1-A6-9Lc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OUT-Lh-7Sq" firstAttribute="trailing" secondItem="wIC-AA-pY8" secondAttribute="trailing" constant="16" id="1V9-xy-hsH"/>
+                            <constraint firstItem="wIC-AA-pY8" firstAttribute="leading" secondItem="OUT-Lh-7Sq" secondAttribute="leading" constant="16" id="2pI-i8-qJh"/>
+                            <constraint firstItem="Blc-ZT-YVv" firstAttribute="centerX" secondItem="vTQ-G8-kwM" secondAttribute="centerX" id="5dF-yV-ad2"/>
+                            <constraint firstAttribute="trailing" secondItem="3Cd-lf-gDA" secondAttribute="trailing" constant="16" id="KgC-FT-lya"/>
+                            <constraint firstItem="3Cd-lf-gDA" firstAttribute="leading" secondItem="OUT-Lh-7Sq" secondAttribute="leading" constant="16" id="QcM-dG-noZ"/>
+                            <constraint firstItem="OUT-Lh-7Sq" firstAttribute="bottom" secondItem="yYM-L3-qxe" secondAttribute="bottom" constant="16" id="Tdx-HM-wSe"/>
+                            <constraint firstItem="yYM-L3-qxe" firstAttribute="leading" secondItem="OUT-Lh-7Sq" secondAttribute="leading" constant="16" id="TlI-SK-8vT"/>
+                            <constraint firstItem="3Cd-lf-gDA" firstAttribute="top" secondItem="wIC-AA-pY8" secondAttribute="bottom" constant="16" id="Ydk-kf-rxw"/>
+                            <constraint firstItem="OUT-Lh-7Sq" firstAttribute="trailing" secondItem="yYM-L3-qxe" secondAttribute="trailing" constant="16" id="shm-gJ-DVF"/>
+                            <constraint firstItem="Blc-ZT-YVv" firstAttribute="centerY" secondItem="vTQ-G8-kwM" secondAttribute="centerY" id="sqE-ea-Hag"/>
+                            <constraint firstItem="wIC-AA-pY8" firstAttribute="top" secondItem="Blc-ZT-YVv" secondAttribute="bottom" constant="16" id="vqX-GE-tib"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OUT-Lh-7Sq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xeh-dr-lwW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-328" y="-29"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="connectionAlert" width="40" height="40"/>
+        <namedColor name="TextColor">
+            <color white="0.51536840200424194" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductInfoCell" rowHeight="114" id="KGk-i7-Jjw" customClass="ProductInfoCell" customModule="MeLi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpd-Cy-iVo">
+                        <rect key="frame" x="16" y="8" width="288" height="24.5"/>
+                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="21"/>
+                        <color key="textColor" name="TextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5O-uk-A6e">
+                        <rect key="frame" x="80.5" y="46" width="223.5" height="22"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                        <color key="textColor" name="TextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="freeShipping" translatesAutoresizingMaskIntoConstraints="NO" id="nbw-3T-1ob">
+                        <rect key="frame" x="275" y="68" width="29" height="30"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRU-Ui-qZh">
+                        <rect key="frame" x="16" y="46" width="59.5" height="22"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                        <color key="textColor" name="TextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Hpd-Cy-iVo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="7Pq-cH-q71"/>
+                    <constraint firstAttribute="trailing" secondItem="c5O-uk-A6e" secondAttribute="trailing" constant="16" id="DBM-yz-FbS"/>
+                    <constraint firstAttribute="trailing" secondItem="Hpd-Cy-iVo" secondAttribute="trailing" constant="16" id="DyS-aB-rjx"/>
+                    <constraint firstItem="c5O-uk-A6e" firstAttribute="leading" secondItem="bRU-Ui-qZh" secondAttribute="trailing" constant="5" id="GSi-oQ-lAu"/>
+                    <constraint firstItem="bRU-Ui-qZh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="LpV-n3-e9M"/>
+                    <constraint firstItem="c5O-uk-A6e" firstAttribute="top" secondItem="Hpd-Cy-iVo" secondAttribute="bottom" constant="13.5" id="OA0-KY-sCa"/>
+                    <constraint firstAttribute="bottom" secondItem="nbw-3T-1ob" secondAttribute="bottom" constant="16" id="QaI-9f-xMg"/>
+                    <constraint firstItem="Hpd-Cy-iVo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="SA0-yy-pUp"/>
+                    <constraint firstAttribute="trailing" secondItem="nbw-3T-1ob" secondAttribute="trailing" constant="16" id="eqa-PJ-PUu"/>
+                    <constraint firstItem="bRU-Ui-qZh" firstAttribute="top" secondItem="Hpd-Cy-iVo" secondAttribute="bottom" constant="13.5" id="vnW-hz-iiF"/>
+                    <constraint firstItem="nbw-3T-1ob" firstAttribute="top" secondItem="c5O-uk-A6e" secondAttribute="bottom" id="yNp-4a-2kF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="freeShipping" destination="nbw-3T-1ob" id="z9R-ud-ZYE"/>
+                <outlet property="price" destination="c5O-uk-A6e" id="IbM-vr-1IW"/>
+                <outlet property="title" destination="Hpd-Cy-iVo" id="wOY-KB-VW2"/>
+            </connections>
+            <point key="canvasLocation" x="37.681159420289859" y="200.22321428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="freeShipping" width="29" height="29"/>
+        <namedColor name="TextColor">
+            <color white="0.51536840200424194" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+    </resources>
+</document>
